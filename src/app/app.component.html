@@ -11,6 +11,11 @@
 
   <app-footer></app-footer>
 
+  <div style = "text-align:center"> 
+    <span>This Txt is change from new-directive</span><br/>
+    <span appNewDirective>  <-> {{title}}.</span> 
+ </div>
+
   <span *ngIf="displayExtra; then display else hidden"></span>
   <ng-template #display>
     <div class="container">

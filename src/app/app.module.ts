@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { AlbumsComponent } from './albums/albums.component';
 import { FooterComponent } from './footer/footer.component';
+import { NewDirectiveDirective } from './new-directive.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     AlbumsComponent,
-    FooterComponent
+    FooterComponent,
+    NewDirectiveDirective
   ],
   imports: [
     BrowserModule,
