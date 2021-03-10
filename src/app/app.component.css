@@ -1,0 +1,10 @@
+html, #wrap { padding:0; margin:0;}
+body { margin:0!important; padding:0; width:100%; color:#959595; font:300 100%/170% 'Open Sans', Verdana, sans-serif;}
+/* #wrap { background:#f5f5f5 url(images/header_bg_4.gif) repeat-x center top;} */
+.clr { clear:both; padding:0; margin:0; width:100%; font-size:0px; line-height:0px;}
+h1 { font:normal 24px/1.5em "Special Elite", Arial, Helvetica, sans-serif; color:#3b3b3b;}
+h2 { font:normal 20px/1.5em "Special Elite", Arial, Helvetica, sans-serif; color:#3b3b3b;}
+code,pre,samp,kbd{font-family: 'Anonymous Pro', Monaco, Menlo, Courier, monospace;}
+a { color:#FF8C48; text-decoration:underline;}
+
+#header, #content, #top-nav, #footer, #footer, form, #content #contentbar, #content #sidebar { margin:0; padding:0;}
