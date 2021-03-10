@@ -8,7 +8,14 @@
               <a href="#" class="btn btn-primary my-2">Main call to action</a>
               <a href="#" class="btn btn-secondary my-2">Secondary action</a>
               <button class="btn btn-dark my-2" (click) = "popUp($event)">Event Binding</button>
+              
             </p>
+              <div>
+                <span *ngIf="showhide; then cdt1 else cdt2"></span>
+                <ng-template #cdt1>Content is displayed</ng-template>
+                <ng-template #cdt2>Content is hidden</ng-template>
+             </div>
+             <button class="btn btn-info my-2" (click) = "showHide($event)">Toggle Event</button>
           </div>
         </div>
       </section>

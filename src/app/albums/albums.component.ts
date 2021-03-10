@@ -1,9 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'app-albums',
   templateUrl: './albums.component.html',
-  styleUrls: ['./albums.component.css']
+  styleUrls: ['./albums.component.css'],
+  encapsulation: ViewEncapsulation.None
 })
 export class AlbumsComponent implements OnInit {
   albums = [
@@ -54,6 +55,12 @@ export class AlbumsComponent implements OnInit {
     bubbles: true
     button: 0
     buttons: 0 ...*/
+ }
+
+ showhide = false;
+ showHide(event) {
+  this.showhide = !this.showhide; 
+  // alert(this.isavailable);
  }
 
   constructor() { }
