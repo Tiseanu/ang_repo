@@ -7,33 +7,14 @@
 <div class="wrap" role="main">
   <app-header></app-header>
 
-  <app-albums></app-albums>
+  <nav> 
+    <a routerLink = "/home">Home</a> 
+    <a routerLink = "/aboutus">About Us </a> 
+    <a routerLink = "/contactus">Contact Us </a> 
+ </nav> 
+ <router-outlet></router-outlet>
 
   <app-footer></app-footer>
-
-  <div style = "text-align:center"> 
-    <span>This Txt is change from new-directive</span><br/>
-    <span appNewDirective>  <-> {{title}}.</span> 
- </div>
-
- <div style="border:solid 1px black;"> 
-  <b>PIPELINES:</b>
-    <b>Lowercase Pipe</b><br/>
-    <span>{{title | uppercase}}</span> <br/>
-    <span>{{title | lowercase}}</span><br/>
-    <b>Currency Pipe</b> <br/>
-    <span>{{6589.23 | currency:"USD"}}</span>
-
-    <br/> 
-    <span>{{6589.23 | currency:"USD":true}}</span> <br/>
-    <b>Date pipe</b> <br/>
-    <span>{{todaydate | date:'d/M/y'}}</span>
-
-    <br/> 
-    <span>{{todaydate | date:'shortTime'}}</span> <br/>
-    <b>Decimal Pipe</b> <br/>
-    <span>{{ 454.78787814 | number: '3.4-4' }}</span> 
-</div> 
 
   <span *ngIf="displayExtra; then display else hidden"></span>
   <ng-template #display>
@@ -50,8 +31,31 @@
       </select> <br/>
       <span>Selected Month is: {{selectedMonth}}</span>
    </div>
+
+   <div style = "text-align:center"> 
+    <span>This Txt is change from new-directive</span><br/>
+    <span appNewDirective>  <-> {{title}}.</span> 
+ </div>
+
+ <div class="container"> 
+  <b>PIPELINES:</b>
+    <b>Lowercase Pipe</b><br/>
+    <span>{{title | uppercase}}</span> <br/>
+    <span>{{title | lowercase}}</span><br/>
+    <b>Currency Pipe</b> <br/>
+    <span>{{6589.23 | currency:"USD"}}</span>
+    <br/> 
+    <span>{{6589.23 | currency:"USD":true}}</span> <br/>
+    <b>Date pipe</b> <br/>
+    <span>{{todaydate | date:'d/M/y'}}</span>
+
+    <br/> 
+    <span>{{todaydate | date:'shortTime'}}</span> <br/>
+    <b>Decimal Pipe</b> <br/>
+    <span>{{ 454.78787814 | number: '3.4-4' }}</span> 
+</div> 
+
   </ng-template>
   <ng-template #hidden>Info is hidden</ng-template>
 
 </div>
-<router-outlet></router-outlet>
