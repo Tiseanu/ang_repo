@@ -5,9 +5,10 @@ import { Directive, ElementRef} from '@angular/core';
 })
 export class NewDirectiveDirective {
 
-  constructor(Element: ElementRef) {
+  constructor(el: ElementRef) {
     console.log(Element);
-    Element.nativeElement.innerText = "Text is changed by changeText Directive.";
+    el.nativeElement.innerText = "Text is changed by changeText Directive.";
+    el.nativeElement.style.backgroundColor = 'yellow';
  }
 
 }

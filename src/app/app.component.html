@@ -16,6 +16,25 @@
     <span appNewDirective>  <-> {{title}}.</span> 
  </div>
 
+ <div style="border:solid 1px black;"> 
+  <b>PIPELINES:</b>
+    <b>Lowercase Pipe</b><br/>
+    <span>{{title | uppercase}}</span> <br/>
+    <span>{{title | lowercase}}</span><br/>
+    <b>Currency Pipe</b> <br/>
+    <span>{{6589.23 | currency:"USD"}}</span>
+
+    <br/> 
+    <span>{{6589.23 | currency:"USD":true}}</span> <br/>
+    <b>Date pipe</b> <br/>
+    <span>{{todaydate | date:'d/M/y'}}</span>
+
+    <br/> 
+    <span>{{todaydate | date:'shortTime'}}</span> <br/>
+    <b>Decimal Pipe</b> <br/>
+    <span>{{ 454.78787814 | number: '3.4-4' }}</span> 
+</div> 
+
   <span *ngIf="displayExtra; then display else hidden"></span>
   <ng-template #display>
     <div class="container">
