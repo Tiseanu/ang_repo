@@ -11,5 +11,12 @@ export class AppComponent {
   months = ["January", "February", "March", "April", "May", "June", "July", 
       "August", "September", "October", "November", "December"];
 
-  displayExtra = true;    
+  displayExtra = true;  
+  
+  selectedMonth = "";
+  changeMonths(selectedValue) {
+    console.log("Changed month from the Dropdown");
+    console.log(selectedValue);
+    this.selectedMonth = selectedValue;
+ }
 }
