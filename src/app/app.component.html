@@ -11,7 +11,8 @@
 
   <app-footer></app-footer>
 
-  <div id="nd_wrap">
+  <span *ngIf="displayExtra; then display else hidden"></span>
+  <ng-template #display>
     <div class="container">
       <div class="card highlight-card card-small">
         <h2>{{ title }} app is running!</h2>
@@ -23,8 +24,9 @@
       <select> 
          <option *ngFor = "let i of months">{{i}}</option> 
       </select> 
-   </div> 
+   </div>
+  </ng-template>
+  <ng-template #hidden>Info is hidden</ng-template>
 
-  </div><!-- nd_wrap-->
 </div>
 <router-outlet></router-outlet>
