@@ -43,7 +43,18 @@ export class AlbumsComponent implements OnInit {
       text: "Card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.",
       time: "15m"
     },
-  ]
+  ];
+
+  popUp(event) {
+    //just added console.log which will display the event details in browser on click of the button.
+    alert("Button is clicked");
+    console.log(event);
+    /*MouseEvent {isTrusted: true, screenX: 874, screenY: 409, clientX: 874, clientY: 338, …}
+    altKey: false
+    bubbles: true
+    button: 0
+    buttons: 0 ...*/
+ }
 
   constructor() { }
 
